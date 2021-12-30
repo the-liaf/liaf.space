@@ -32,9 +32,11 @@ span {
     cursor: pointer;
 }
 
-span::selection {
+span::selection , span:hover {
     color: white;
 }
+
+
 
 .container {
     display: flex;
@@ -53,11 +55,13 @@ span::selection {
 
 .btn {
     border: 1px solid transparent;
-    background-color: white;
+    border-radius: 15px;
+    padding: 0.5rem;
+    background-color: red ;
     text-decoration: none;
     cursor: pointer;
     font-size: 2rem;
-    color: red;
+    color: white;
 }
 
 .btn:not(:last-child) {
@@ -65,6 +69,6 @@ span::selection {
 }
 
 .btn:hover {
-    color: white;
-    background-color: red;
+    color: #333;
+    background-color: white;
 }

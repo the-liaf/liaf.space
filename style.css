@@ -57,7 +57,7 @@ span::selection {
     text-decoration: none;
     cursor: pointer;
     font-size: 2rem;
-    color: white;
+    color: red;
 }
 
 .btn:not(:last-child) {
@@ -65,6 +65,6 @@ span::selection {
 }
 
 .btn:hover {
-    color: red;
+    color: white;
     background-color: red;
 }

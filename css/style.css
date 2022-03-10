@@ -1,0 +1,464 @@
+/*
+
+УСЛУГИ - padding и flex
+АДАПТИВНОСТЬ
+
+
+
+*/
+
+@font-face {
+	font-family: 'Muller';
+	src: url("../fonts/MullerRegular.woff2");
+	src: local('Muller Regular'), local('MullerRegular'),
+		url('../fonts/MullerRegular.woff') format('woff'),
+    url("../fonts/MullerRegular.woff2") format('woff2');
+	font-weight: 100;
+	font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+	font-family: 'MullerMedium';
+	src: url('../fonts/MullerMedium.woff2');
+	src: local('Muller Medium'), local('MullerMedium'),
+		url('../fonts/MullerMedium.woff') format('woff'),
+    url('../fonts/MullerMedium.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+	font-family: 'MullerBold';
+	src: url('../fonts/MullerBold.woff2');
+	src: local('Muller Bold'), local('MullerBold'),
+		url('../fonts/MullerBold.woff') format('woff'),
+    url('../fonts/MullerBold.woff2') format('woff2');
+	font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Muller", sans-serif;
+  background-color: #E5E5E5;;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+/* Container  */
+.container {
+  margin: 0 auto;
+  width: 1170px;
+}
+
+/* Typography  */
+.section-header {
+  padding-left: 3rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-family: "Muller", sans-serif;
+  font-weight: 400;
+  color: #333;
+  font-size: 2rem;
+}
+
+/* Header Styles  */
+
+.header-logo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.header-logotype {
+  padding-right: 1.5rem;
+}
+
+.header-phone {
+  margin-right: auto;
+  font-family: "MullerBold", sans-serif;
+  font-size: 1rem;
+  color: #666;
+}
+
+.header-account {
+  color: #CC9933;;
+}
+
+/* HEADER MENU */
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  font-family: "Muller", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0.5rem;
+}
+
+.nav-menu {
+  padding-right: 0.5rem;
+  margin-right: 3rem;
+  border-right: 1px solid #ccc;
+}
+
+.header-list {
+  display: flex;
+  list-style-type: none;
+}
+
+.header-list-item {
+  font-family: "Muller", sans-serif;
+  margin-right: 4rem;
+  font-size: 1rem;
+}
+
+.header-list-item:nth-last-child(1) {
+  margin-right: 1.25rem;
+}
+
+.header-btn {
+  padding: 0.7rem;
+  background-color: #fff;
+  color: #CC9933;
+  border: 1px solid #CC9933;
+  border-radius: 0.5rem;
+}
+
+.header-btn-margin {
+  margin-right: 2rem;
+}
+
+/* Special Offer  */
+.offer-cards {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  margin-top: 0;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+.offer-cards-left {
+  flex: 0 0 50%;
+  align-items: stretch;
+  margin-right: 1rem;
+}
+
+.l-card-1 {
+  flex: 0 1 100%;
+  min-height: 16rem;
+  background: linear-gradient(90deg,rgba(48, 64, 89, 0.84) , rgba(53, 65, 83, 0) 65.7%) ,  url("../img/offer-1.png") no-repeat;
+  background-size: cover;
+  border-radius: 1rem;
+}
+
+.l-card-2 {
+  flex: 0 1 100%;
+  min-height: 16rem;
+  background-image: url("../img/offer-2.png");
+  background: linear-gradient(90deg,rgba(48, 64, 89, 0.84) , rgba(53, 65, 83, 0) 65.7%) ,  url("../img/offer-2.png") no-repeat;
+  background-size: cover;
+  border-radius: 1rem;
+}
+
+.r-card {
+  flex: 1 0 50%;
+  margin-top: 2rem; /* выровнить блок сверху */
+  padding-top: 7rem; /* опустить текст */
+  background: url("../img/offer-3.png") no-repeat;
+  background-size: contain;
+}
+
+.r-header {
+  margin-bottom: 0;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 4rem;
+}
+
+.r-price {
+  font-size: 1.5rem;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.r-showmore {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #FFCC66;
+}
+
+.card-padding {
+  padding-top: 1.5rem;
+  padding-left: 2.5rem;
+}
+
+.card-price {
+  margin-top: 0;
+  font-size: 1.2rem;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.card-header {
+  margin-bottom: 0;
+  padding-top: 3.5rem;
+  font-size: 2rem;
+}
+
+.card-showmore {
+  display: flex;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #FFCC66;
+}
+
+.card-showmore::before {
+  padding-left: 30px;
+  background-image: url("../img/showmore-arrow.svg");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+}
+
+/* about us  */
+.section-descr {
+  width: 77%;
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+/* services */
+.services-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0;
+  min-height: 100%;
+  list-style: none;
+}
+
+.services-list-item {
+  flex: 1 0 calc(50% - 40px);
+  margin-right: 2rem;
+  background-color: #fff;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+}
+
+.services-list-item:last-child {
+  margin-right: 0;
+  padding: 0;
+}
+
+.services-list-item:nth-child(2) {
+  margin-right: 0;
+}
+
+.services-item-image {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.services-header {
+  padding-left: 2rem;
+  padding-top: 1rem;
+  color: #CC9933;
+  font-size: 1.2rem;
+}
+
+.services-link::after {
+  content: '';
+  margin-left: 0.5rem;
+  padding-right: 1rem;
+  background-image: url("../img/showmore-arrow.svg");
+  background-repeat: no-repeat;
+}
+
+.services-item-descr {
+  padding: 0 1rem 1rem 2rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+/* benefits */
+.benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.benefits-card {
+  display: flex;
+  flex: 1 0 calc(25% - 40px);
+  flex-direction: column;
+  background-color: #fff;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  padding-top: 2rem;
+  padding-left: 2rem;
+  border-radius: 1rem;
+}
+
+.benefits-card:nth-child(4) {
+  margin-right: 0;
+}
+
+.benefits-card:last-child {
+  margin-right: 0;
+}
+
+.benefits-descr {
+  margin-top: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 2rem;
+  width: 80%;
+}
+
+.benefits-img {
+  padding-top: 6rem;
+  background-size: 5rem;
+  background-repeat: no-repeat;
+}
+
+.benefits-image-1 {
+  background-image: url("../img/bathtub.svg");
+}
+
+.benefits-image-2 {
+  background-image: url("../img/hanger.svg");
+}
+
+.benefits-image-3 {
+  background-image: url("../img/heating.svg");
+}
+
+.benefits-image-4 {
+  background-image: url("../img/hotel-key.svg");
+}
+
+.benefits-image-5 {
+  background-image: url("../img/parking.svg");
+}
+
+.benefits-image-6 {
+  background-image: url("../img/reception.svg");
+}
+
+.benefits-image-7 {
+  background-image: url("../img/security-box.svg");
+}
+
+.benefits-image-8 {
+  background-image: url("../img/swimming-pool.svg");
+}
+
+/* places */
+.places-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.place-item {
+  background-color: #fff;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+}
+
+.places-price-and-stars {
+  padding-left: 3rem;
+}
+
+.place-item-price {
+  display: inline-block;
+  padding-right: 15%;
+  font-size: 1rem;
+}
+
+.place-item-price strong {
+  font-size: 1.2rem;
+}
+
+.price-color {
+  color: #999;
+}
+
+.places-stars {
+  display: inline;
+}
+
+.place-item-name {
+  padding-left: 3rem;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.place-item-location {
+  color: #999;
+  padding-left: 3rem;
+}
+
+.place-btn {
+  display: inline-block;
+  color: #CC9933;
+  border: 1px solid #CC9933;
+  border-radius: 0.7rem;
+  padding: 0.8rem 1.2rem;
+  margin: 0 0 1rem 3rem;
+}
+
+.place-last-item {
+  display: flex;
+  flex-grow: 2;
+  align-items: flex-end;
+  padding-bottom: 1.5rem;
+  background: url("../img/place-image-9.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+.place-last-link {
+  margin: 0 auto;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.place-last-link::after {
+  content: '';
+  margin-left: 0.5rem;
+  padding-right: 1rem;
+  background-image: url("../img/arrow-white.svg");
+  background-repeat: no-repeat;
+}
